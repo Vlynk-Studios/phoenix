@@ -1,0 +1,30 @@
+{
+  "name": "phoenix-correos",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "cli": "node --env-file=.env src/adaptadores/cli.ts",
+    "migrar": "node --env-file=.env src/persistencia/migrar.ts",
+    "fase0": "node --env-file=.env scripts/fase0-graph.ts",
+    "tipos": "tsc --noEmit",
+    "test": "node --env-file=.env.test --test \"src/**/*.test.ts\"",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down"
+  },
+  "packageManager": "pnpm@12.16.1",
+  "dependencies": {
+    "@azure/msal-node": "^7.1.1",
+    "commander": "^15.0.0",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "typescript": "^7.0.2"
+  }
+}

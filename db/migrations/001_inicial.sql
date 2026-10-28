@@ -1,0 +1,3 @@
+-- db/migrations/001_inicial.sql
+-- Migración inicial — tablas base del proyecto Phoenix.
+-- Se implementa en la Fase 2.

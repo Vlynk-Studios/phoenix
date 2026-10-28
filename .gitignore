@@ -1,0 +1,6 @@
+node_modules/
+.env
+.env.test
+.token_cache.json
+*.log
+fase0-resultados.json
