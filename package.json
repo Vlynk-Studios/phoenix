@@ -7,13 +7,12 @@
     "node": ">=26"
   },
   "scripts": {
-    "cli": "node --env-file=.env src/adaptadores/cli.ts",
-    "migrar": "node --env-file=.env src/persistencia/migrar.ts",
-    "fase0": "node --env-file=.env scripts/fase0-graph.ts",
-    "tipos": "tsc --noEmit",
-    "test": "node --env-file=.env.test --test \"src/**/*.test.ts\"",
-    "db:up": "docker compose up -d db",
-    "db:down": "docker compose down"
+    "cli":      "node --env-file=.env src/adaptadores/cli.ts",
+    "migrate":  "node --env-file=.env src/persistencia/migrar.ts",
+    "phase0":   "node --env-file=.env scripts/fase0-graph.ts",
+    "types":    "tsc --noEmit",
+    "test":     "node --env-file=.env.test --test \"src/**/*.test.ts\"",
+    "db:setup": "node --env-file=.env scripts/db-setup.ts"
   },
   "packageManager": "pnpm@12.16.1",
   "dependencies": {
